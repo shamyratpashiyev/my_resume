@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Unna_regular';
+    src: url("fonts/Unna/Unna-Regular.ttf") format("truetype");
+ }
+
 .flex_row{
     display: flex;
     flex-direction: row;
@@ -15,18 +20,18 @@ html{
 
 body{
     justify-content: center;
-    font-family: Cambria,'Times New Roman', serif;
+    font-family: 'Unna_regular', Helvetica, Cambria,'Times New Roman', serif;
     font-weight: bold;
 
     .inner_wrapper{
         width: 800px;
 
         .name_profession_block{
-            margin-bottom: 20px;
+            margin-bottom: 10px;
 
             .full_name{
                 margin: 0;
-                font-size: 30px;
+                font-size: 26px;
                 color: var(--dark_blue)
             }
 
@@ -40,7 +45,7 @@ body{
         .contacts_row{
             justify-content: space-between;
             width: 100%;
-            margin-bottom: 35px;
+            margin-bottom: 20px;
 
             .contact_wrapper{
                 align-items: center;
@@ -51,6 +56,11 @@ body{
             svg{
                 fill: var(--dark_gold);
             }
+
+            .phone_number, .email, .location{
+                text-decoration: none;
+                color: #000;
+            }
         }
 
         .content_columns_wrapper{
@@ -60,39 +70,39 @@ body{
 
             .block_title{
                 color: var(--dark_blue);
-                margin: 0;
-                font-size: 22px;
-            }
-
-            hr{
-                border: none;
-                background-color: var(--dark_blue);
-                height: 2px;
-                margin: 0 0 15px 0;
+                margin: 0 0 10px 0;
+                font-size: 18px;
+                border-bottom: var(--dark_blue) 1px solid;
             }
 
             .left_column{
-                width: 54%;
+                width: 65%;
                 flex-shrink: 0;
 
                 .skills_block{
-                    margin-bottom: 35px;
+                    margin-bottom: 10px;
 
                     .skill_names_row{
                         align-items: center;
                         row-gap: 10px;
                         column-gap: 20px;
                         flex-wrap: wrap;
+                        margin-bottom: 8px;
 
-                        .skill_name{
-                            font-weight: bold;
-                            border-bottom: 2px solid gray;
+                        .skill_item{
+                            font-size: 14px;
+                            font-weight: 300;
+                            margin: 0;
+
+                            .bold{
+                                font-weight: 800;
+                            }
                         }
                     }
                 }
 
                 .experience_block{
-                   margin-bottom: 35px;
+                   
                     .experience_container{
                         row-gap: 3px;
                         margin-bottom: 15px;
@@ -102,26 +112,24 @@ body{
                         .position{
                             margin: 0;
                             color: var(--dark_gold);
-                            font-size: 17px;
+                            font-size: 15px;
                         }
 
                         .firm_name{
                             color: var(--dark_blue);
+                            font-size: 15px;
                         }
 
-                        .period{
-                            align-items: center;
-                            column-gap: 5px;
-                            color: var(--dark_blue);
+                        .experience_subsection_title{
+                            text-decoration: underline;
                             margin: 0;
-
-                            svg{
-                                fill: var(--dark_blue);
-                            }
+                            font-size: 14px;
                         }
 
-                        .description{
-                            margin: 0;
+                        ul.experience_subsection{
+                            font-size: 14px;
+                            font-weight: normal;
+                            letter-spacing: 0.2px;
                         }
 
                         ul{
@@ -133,167 +141,31 @@ body{
                         }
                     }
                 }
-
-                .projects_block{
-
-                    .projects_inner_wrapper{
-                        row-gap: 20px;
-
-                        .project_container{
-                            row-gap: 3px;
-                            border-bottom: 1px solid gray;
-                            padding-bottom: 10px;
-
-                            .name{
-                                font-size: larger;
-                                color: var(--dark_blue);
-                                font-weight: bold;
-                                margin: 0;
-                            }
-
-                            .url{
-                                margin-bottom: 10px;
-                                align-items: center;
-                                column-gap: 3px;
-
-                                a{
-                                    text-decoration: none;
-                                    color: gray;
-                                }
-                            }
-
-                            .desc{
-                                margin: 0;
-                            }
-                        }
-                    }
-                }
             }
 
             .right_column{
                 width: -webkit-fill-available;
 
-                .pls_block{
-                    margin-bottom: 35px;
-                    
-                    .pls_inner_wrapper{
-                        row-gap: 15px;
-
-                        .pl_container{
-                            row-gap: 5px;
-
-                            .name{
-                                color: var(--dark_blue);
-                                font-size: 17px;
-                                font-weight: bold;
-                            }
-                            
-                            .circles_row{
-                                column-gap: 5px;
-
-                                .circle{
-                                    width: 15px;
-                                    height: 15px;
-                                    border: none;
-                                    background-color: gray;
-                                    border-radius: 50%;
-
-                                    &.active{
-                                        background-color: var(--dark_gold);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .strengths_block{
-                    margin-bottom: 35px;
-
-                    .strengths_inner_wrapper{
-                        row-gap: 10px;
-
-                        .strength_container{
-                            column-gap: 13px;
-                            align-items: center;
-                            border-bottom: 1px solid gray;
-                            padding-bottom: 10px;
-
-                            svg{
-                                fill: var(--dark_gold);
-                                width: 30px;
-                                height: 30px;
-                            }
-
-                            .strength_name{
-                                font-size: 17px;
-                                font-weight: bold;
-                            }
-                        }
-                    }
-                }
-
                 .education_block{
-                    margin-bottom: 35px;
+                    margin-bottom: 25px;
 
                     .education_inner_wrapper{
+                        row-gap: 10px;
 
                         .education_container{
-                            row-gap: 6px;
-                            .major{
-                                font-size: larger;
-                                font-weight: bold;
-                                color: var(--dark_blue);
-                            }
+                            row-gap: 1px;
 
                             .school_name{
                                 font-weight: bold;
+                                font-size: 15px;
                                 color: var(--dark_gold);
                             }
 
-                            .study_period{
-                                align-items: center;
-                                column-gap: 5px;
-                            }
-                        }
-                    }
-                }
-
-                .langs_block{
-                    margin-bottom: 35px;
-                    
-                    .langs_inner_wrapper{
-                        row-gap: 15px;
-
-                        .lang_container{
-                            row-gap: 5px;
-
-                            .name{
-                                color: var(--dark_blue);
-                                font-size: 17px;
-                                font-weight: bold;
-                            }
-
-                            .level{
+                            .major{
                                 font-size: 14px;
-                                font-weight: bold;
+                                font-weight: normal;
                             }
-                            
-                            .circles_row{
-                                column-gap: 5px;
 
-                                .circle{
-                                    width: 15px;
-                                    height: 15px;
-                                    border: none;
-                                    background-color: gray;
-                                    border-radius: 50%;
-
-                                    &.active{
-                                        background-color: var(--dark_gold);
-                                    }
-                                }
-                            }
                         }
                     }
                 }
@@ -308,18 +180,18 @@ body{
                             column-gap: 13px;
                             align-items: center;
                             border-bottom: 1px solid gray;
-                            padding-bottom: 10px;
+                            padding-bottom: 3px;
                             text-decoration: none;
                             color: #000;
 
                             svg{
                                 fill: var(--dark_gold);
-                                width: 30px;
-                                height: 30px;
+                                width: 20px;
+                                height: 20px;
                             }
 
                             .contact_name{
-                                font-size: 17px;
+                                font-size: 14px;
                                 font-weight: bold;
                             }
                         }
