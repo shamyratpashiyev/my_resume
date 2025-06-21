@@ -99,7 +99,7 @@ body .inner_wrapper .content_columns_wrapper .left_column .experience_block .exp
   color: var(--dark_gold);
   font-size: 15px;
 }
-body .inner_wrapper .content_columns_wrapper .left_column .experience_block .experience_container .firm_name {
+body .inner_wrapper .content_columns_wrapper .left_column .experience_block .experience_container .firm_and_project_name {
   color: var(--dark_blue);
   font-size: 15px;
 }
